@@ -86,7 +86,7 @@ public class Hashing
 				String d = sc.next();
 				tb.add(k, d);
 			}
-			System.out.printf("#%d\n", test_case);
+			System.out.print(test_case);
 			int Q = sc.nextInt();
 			for (int i = 0; i < Q; i++)
 			{
@@ -94,11 +94,11 @@ public class Hashing
 				String d = tb.find(k);
 				if (d != null)
 				{
-					System.out.printf("%s\n", d);
+					System.out.println(d);
 				}
 				else 
 				{
-					System.out.printf("not find\n");
+					System.out.print("not find\n");
 				}
 			}
 			

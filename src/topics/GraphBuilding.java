@@ -76,10 +76,10 @@ class Graph
 		AdjlistNode adjList = adjListArr[i].head;
 		while (adjList != null)
 		{
-			System.out.printf("%d ", adjList.vertex);
+			System.out.print(adjList.vertex);
 			adjList = adjList.next;
 		}
-		System.out.printf("\n");
+		System.out.println();
 	}
 }
 	
@@ -102,7 +102,7 @@ public class GraphBuilding
 				int ev = sc.nextInt();
 				graph.addEdge(sv, ev);
 			}
-			System.out.printf("#%d\n", test_case);
+			System.out.println(test_case);
 			for (int i = 0; i < Q; i++)
 			{
 				int sv = sc.nextInt();
