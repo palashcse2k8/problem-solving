@@ -104,7 +104,7 @@ class BinarySearchTree{
 				return root.left;
 			}
 			
-			root.value = leftMost(root.right).value;
+			root.value = rightLeftMost(root.right).value;
 			
 			root.right = deleteNode(root.right, root.value);			
 		}
@@ -112,7 +112,7 @@ class BinarySearchTree{
 		return root;
 	}
 	
-	public TreeNode leftMost (TreeNode root) {
+	public TreeNode rightLeftMost (TreeNode root) {
 		
 		while(root.left != null) {
 			root = root.left;

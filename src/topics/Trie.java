@@ -38,8 +38,8 @@ public class Trie {
 				if(currentNode.child[index] == null)
 				{
 					currentNode.child[index] = new Node();
-					currentNode = currentNode.child[index];
 				}
+				currentNode = currentNode.child[index];
 			}
 			
 			currentNode.isLeaf = 1;
