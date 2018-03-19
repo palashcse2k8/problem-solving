@@ -1,11 +1,12 @@
 package topics;
 
+import java.awt.peer.SystemTrayPeer;
 import java.util.Scanner;
 
 public class BinaryConveration {
 	
 	static String str;
-	
+	static int [] arr = new int[32];
 	static void binaryUsingBitOperation(int N)
 	{
 		str = "";
@@ -14,6 +15,20 @@ public class BinaryConveration {
 			str+= (N>>i) & 1;
 		}
 		System.out.println(str);
+	}
+	
+	static void binaryUsingBitOperation1(int N)
+	{
+		int index = 0;
+		for (int i = 31; i >= 0; i--) 
+		{
+			arr[index++]= (N>>i) & 1;
+		}
+		
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i]);
+		}
+		System.out.println();
 	}
 	
 	static void binary(int n){
@@ -32,6 +47,7 @@ public class BinaryConveration {
 		int N = sc.nextInt();
 		
 		binaryUsingBitOperation(N);
+		binaryUsingBitOperation1(N);
 		
 		str ="";
 		binary(N);
