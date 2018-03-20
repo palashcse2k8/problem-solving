@@ -84,7 +84,7 @@ public class Normal_Text_Editor {
 				pos = end + diff;
 			}
 			
-			while(dataIndex<length)
+			while(dataIndex<length && pos<=editor.length -1)
 			{
 				data[dataIndex++] = editor[pos++];
 			}
@@ -131,7 +131,7 @@ public class Normal_Text_Editor {
 		
 //		myTextEditor.delete(15, 5);
 		myTextEditor.print();
-		output = myTextEditor.read(3, 7);
+		output = myTextEditor.read(3, 17);
 		
 		for (int i = 0; i < output.length; i++) {
 			System.out.print(output[i]);
