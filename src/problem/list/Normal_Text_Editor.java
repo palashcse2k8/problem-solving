@@ -29,21 +29,23 @@ public class Normal_Text_Editor {
 			{
 				if(pos<start)
 				{
-					for (int i = start - 1; i >= pos; i--) {
-						swapCharacter(i, end);
+					while(pos<start)
+					{
+						swapCharacter(start - 1, end);
+						start--;
 						end--;
 					}
 				}
 				else
 				{
-					for (int i = start; i <= pos; i++) 
+					
+					while(start<pos)
 					{
-						swapCharacter(i, end);
+						swapCharacter(end + 1, start);
+						start++;
 						end++;
 					}
 				}
-				
-				start = pos;
 			}	
 		}
 		
@@ -129,7 +131,7 @@ public class Normal_Text_Editor {
 //		myTextEditor.insert("la".toCharArray(), 2, 2);
 		
 		
-//		myTextEditor.delete(15, 5);
+		myTextEditor.delete(2, 2);
 		myTextEditor.print();
 		output = myTextEditor.read(3, 17);
 		
